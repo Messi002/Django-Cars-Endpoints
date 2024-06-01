@@ -25,3 +25,5 @@ python manage.py migrate
 
 ## Run App API
 python manage.py runserver
+
+python manage.py startapp todoapp
