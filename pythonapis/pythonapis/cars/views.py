@@ -19,7 +19,7 @@ class CarsViewset(APIView):
         return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
 
     def post(self, request):
-        serializer = serializers.CarsSerializer(data=request.data)
+        serializer = serializers.CarsSerializer(data= request.data)
         if serializer.is_valid():
             serializer.save()
             return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
